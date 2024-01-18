@@ -3,7 +3,7 @@ library(shiny)
 library(ggplot2)
 
 ## base R!
-d <- mtcars
+d <- read_csv('https://raw.githubusercontent.com/diegomanya/shiny_web/main/data/mtcars.csv')
 d$car_types <- rownames(d)
 d <- d[,c("car_types","mpg", "cyl", "am", "disp", "wt")]
 d$cyl <- as.factor(d$cyl)
